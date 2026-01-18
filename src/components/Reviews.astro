@@ -24,7 +24,7 @@ const reviews = [
 ];
 ---
 
-<section class="py-20 px-4 bg-gray-50">
+<section id="reviews" class="py-20 px-4 bg-gray-50">
   <div class="max-w-7xl mx-auto">
     <h2 class="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-4">
       Lo Que Dicen Nuestros Clientes
@@ -35,8 +35,8 @@ const reviews = [
     
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {reviews.map((review) => (
-        <article class="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-2xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">          <div class="flex items-center gap-4 mb-6 relative">
-            <div class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700 text-white flex items-center justify-center text-xl font-bold shrink-0 shadow-md">
+        <article class="bg-linear-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-2xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">          <div class="flex items-center gap-4 mb-6 relative">
+            <div class="w-16 h-16 rounded-full bg-linear-to-br from-blue-600 via-indigo-600 to-purple-700 text-white flex items-center justify-center text-xl font-bold shrink-0 shadow-md">
                 {review.initials}
             </div>
             <div class="flex-1">
