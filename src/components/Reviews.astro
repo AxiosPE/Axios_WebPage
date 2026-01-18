@@ -35,17 +35,16 @@ const reviews = [
     
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {reviews.map((review) => (
-        <article class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-          <div class="flex items-center gap-4 mb-6 relative">
-            <div class="w-16 h-16 rounded-full bg-gradient-to-br from-purple-600 to-purple-400 text-white flex items-center justify-center text-xl font-bold shrink-0">
-              {review.initials}
+        <article class="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-2xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">          <div class="flex items-center gap-4 mb-6 relative">
+            <div class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700 text-white flex items-center justify-center text-xl font-bold shrink-0 shadow-md">
+                {review.initials}
             </div>
             <div class="flex-1">
               <h3 class="text-lg font-bold text-gray-900">{review.name}</h3>
               <p class="text-sm text-gray-500">{review.role}</p>
             </div>
-            <div class="text-gray-200 opacity-50 shrink-0">
-              <svg width="50" height="40" viewBox="0 0 50 40" fill="none" class="w-12 h-10">
+            <div class="text-indigo-200 shrink-0 drop-shadow-sm">
+              <svg width="60" height="48" viewBox="0 0 50 40" fill="none" class="w-14 h-11">
                 <path d="M10 40C7.33333 40 5 39 3 37C1 35 0 32.3333 0 29C0 25.6667 1 22.3333 3 19C5 15.6667 8 12.6667 12 10L15 14C12.3333 15.3333 10.3333 17 9 19C7.66667 21 7 23 7 25H12V40H10ZM35 40C32.3333 40 30 39 28 37C26 35 25 32.3333 25 29C25 25.6667 26 22.3333 28 19C30 15.6667 33 12.6667 37 10L40 14C37.3333 15.3333 35.3333 17 34 19C32.6667 21 32 23 32 25H37V40H35Z" fill="currentColor"/>
               </svg>
             </div>
