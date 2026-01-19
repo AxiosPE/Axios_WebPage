@@ -36,7 +36,7 @@ import heroImage from '@images/imagen-codigo.jpg';
         
         <div class="flex flex-col sm:flex-row gap-4">
           <button 
-            id="btn-contact"
+            id="hero-btn-contact"
             class="px-8 py-4 bg-linear-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold flex items-center justify-center gap-2 hover:shadow-xl hover:scale-105 active:scale-95 transition-all duration-300"
           >
             Comenzar Proyecto
@@ -46,7 +46,7 @@ import heroImage from '@images/imagen-codigo.jpg';
           </button>
           
           <button 
-            id="btn-services"
+            id="hero-btn-services"
             class="px-8 py-4 border-2 border-gray-300 text-gray-700 rounded-lg font-semibold hover:border-blue-600 hover:text-blue-600 hover:scale-105 active:scale-95 transition-all duration-300"
           >
             Ver Servicios
@@ -82,11 +82,11 @@ import heroImage from '@images/imagen-codigo.jpg';
 </section>
 
 <script>
-  document.getElementById('btn-contact')?.addEventListener('click', () => {
+  document.getElementById('hero-btn-contact')?.addEventListener('click', () => {
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   });
 
-  document.getElementById('btn-services')?.addEventListener('click', () => {
+  document.getElementById('hero-btn-services')?.addEventListener('click', () => {
     document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
   });
 </script>

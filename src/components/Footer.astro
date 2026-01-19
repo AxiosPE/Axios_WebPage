@@ -44,10 +44,10 @@
       <div>
         <h5 class="text-white text-lg font-bold mb-6">Enlaces Rápidos</h5>
         <ul class="space-y-3">
-          <li><a href="#servicios" class="hover:text-blue-400 transition-colors duration-300">Servicios</a></li>
-          <li><a href="#portfolio" class="hover:text-blue-400 transition-colors duration-300">Portfolio</a></li>
-          <li><a href="#testimonios" class="hover:text-blue-400 transition-colors duration-300">Testimonios</a></li>
-          <li><a href="#contacto" class="hover:text-blue-400 transition-colors duration-300">Contacto</a></li>
+          <li><a id="footer-btn-services" class="hover:text-blue-400 transition-colors duration-300">Servicios</a></li>
+          <li><a id="footer-btn-portfolio" class="hover:text-blue-400 transition-colors duration-300">Portfolio</a></li>
+          <li><a id="footer-btn-reviews" class="hover:text-blue-400 transition-colors duration-300">Testimonios</a></li>
+          <li><a id="footer-btn-contact" class="hover:text-blue-400 transition-colors duration-300">Contacto</a></li>
         </ul>
       </div>
 
@@ -73,3 +73,21 @@
     </div>
   </div>
 </footer>
+
+<script>
+  document.getElementById('footer-btn-contact')?.addEventListener('click', () => {
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  });
+
+  document.getElementById('footer-btn-services')?.addEventListener('click', () => {
+    document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+  });
+
+  document.getElementById('footer-btn-portfolio')?.addEventListener('click', () => {
+    document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' });
+  });
+
+  document.getElementById('footer-btn-reviews')?.addEventListener('click', () => {
+    document.getElementById('reviews')?.scrollIntoView({ behavior: 'smooth' });
+  });
+</script>
