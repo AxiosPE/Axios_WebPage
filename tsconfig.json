@@ -25,6 +25,9 @@
       ],
       "@pages/*": [
         "src/pages/*"
+      ],
+      "@images/*": [
+        "src/assets/images/*"
       ]
     }
   }

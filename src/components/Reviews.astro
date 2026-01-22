@@ -5,64 +5,86 @@ const reviews = [
     role: "CEO, Fashion Store",
     initials: "MG",
     rating: 5,
-    comment: "Increíble trabajo. Mi tienda online ha superado todas las expectativas. El diseño es hermoso y las ventas han aumentado un 200%."
+    comment:
+      "Increíble trabajo. Mi tienda online ha superado todas las expectativas. El diseño es hermoso y las ventas han aumentado un 200%.",
   },
   {
     name: "Carlos Ramírez",
     role: "Fundador, Tech Startup",
     initials: "CR",
     rating: 5,
-    comment: "Profesionalismo de primera. Entregaron el proyecto antes de tiempo y con una calidad excepcional. Totalmente recomendados."
+    comment:
+      "Profesionalismo de primera. Entregaron el proyecto antes de tiempo y con una calidad excepcional. Totalmente recomendados.",
   },
   {
     name: "Ana Martínez",
     role: "Directora de Marketing",
     initials: "AM",
     rating: 5,
-    comment: "La comunicación fue excelente durante todo el proceso. El resultado final superó nuestras expectativas. ¡Gracias!"
-  }
+    comment:
+      "La comunicación fue excelente durante todo el proceso. El resultado final superó nuestras expectativas. ¡Gracias!",
+  },
 ];
 ---
 
-<section class="py-20 px-4 bg-gray-50">
+<section id="reviews" class="py-20 px-4 bg-gray-50">
   <div class="max-w-7xl mx-auto">
     <h2 class="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-4">
       Lo Que Dicen Nuestros Clientes
     </h2>
     <p class="text-lg text-center text-gray-600 mb-16 max-w-2xl mx-auto">
-      La satisfacción de nuestros clientes es nuestra mejor carta de presentación
+      La satisfacción de nuestros clientes es nuestra mejor carta de
+      presentación
     </p>
-    
+
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {reviews.map((review) => (
-        <article class="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-2xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">          <div class="flex items-center gap-4 mb-6 relative">
-            <div class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700 text-white flex items-center justify-center text-xl font-bold shrink-0 shadow-md">
+      {
+        reviews.map((review) => (
+          <article class="bg-linear-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-2xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+            <div class="flex items-center gap-4 mb-6 relative">
+              <div class="w-16 h-16 rounded-full bg-linear-to-br from-blue-600 via-indigo-600 to-purple-700 text-white flex items-center justify-center text-xl font-bold shrink-0 shadow-md">
                 {review.initials}
+              </div>
+              <div class="flex-1">
+                <span class="text-2xl font-bold text-gray-900">{review.name}</h3>
+                <p class="text-sm text-gray-500">{review.role}</p>
+              </div>
+              <div class="text-indigo-200 shrink drop-shadow-sm">
+                <svg
+                  width="60"
+                  height="48"
+                  viewBox="0 0 50 40"
+                  fill="none"
+                  class="w-14 h-11"
+                >
+                  <path
+                    d="M10 40C7.33333 40 5 39 3 37C1 35 0 32.3333 0 29C0 25.6667 1 22.3333 3 19C5 15.6667 8 12.6667 12 10L15 14C12.3333 15.3333 10.3333 17 9 19C7.66667 21 7 23 7 25H12V40H10ZM35 40C32.3333 40 30 39 28 37C26 35 25 32.3333 25 29C25 25.6667 26 22.3333 28 19C30 15.6667 33 12.6667 37 10L40 14C37.3333 15.3333 35.3333 17 34 19C32.6667 21 32 23 32 25H37V40H35Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
             </div>
-            <div class="flex-1">
-              <h3 class="text-lg font-bold text-gray-900">{review.name}</h3>
-              <p class="text-sm text-gray-500">{review.role}</p>
+
+            <div class="flex gap-1 mb-4">
+              {Array.from({ length: review.rating }).map(() => (
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="#FFB800"
+                  class="w-6 h-6"
+                >
+                  <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                </svg>
+              ))}
             </div>
-            <div class="text-indigo-200 shrink-0 drop-shadow-sm">
-              <svg width="60" height="48" viewBox="0 0 50 40" fill="none" class="w-14 h-11">
-                <path d="M10 40C7.33333 40 5 39 3 37C1 35 0 32.3333 0 29C0 25.6667 1 22.3333 3 19C5 15.6667 8 12.6667 12 10L15 14C12.3333 15.3333 10.3333 17 9 19C7.66667 21 7 23 7 25H12V40H10ZM35 40C32.3333 40 30 39 28 37C26 35 25 32.3333 25 29C25 25.6667 26 22.3333 28 19C30 15.6667 33 12.6667 37 10L40 14C37.3333 15.3333 35.3333 17 34 19C32.6667 21 32 23 32 25H37V40H35Z" fill="currentColor"/>
-              </svg>
-            </div>
-          </div>
-          
-          <div class="flex gap-1 mb-4">
-            {Array.from({ length: review.rating }).map(() => (
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="#FFB800" class="w-6 h-6">
-                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-              </svg>
-            ))}
-          </div>
-          
-          <blockquote class="text-gray-600 italic leading-relaxed">
-            "{review.comment}"
-          </blockquote>
-        </article>
-      ))}
+
+            <blockquote class="text-gray-600 italic leading-relaxed">
+              "{review.comment}"
+            </blockquote>
+          </article>
+        ))
+      }
     </div>
   </div>
 </section>
