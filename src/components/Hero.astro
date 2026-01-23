@@ -4,40 +4,40 @@ import { Image } from 'astro:assets';
 import heroImage from '@images/imagen-codigo.jpg';
 ---
 
-<section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-linear-to-br from-blue-50 via-white to-purple-50">
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-linear-to-br">
   
   <div class="absolute inset-0 overflow-hidden pointer-events-none">
-    <div class="absolute top-20 left-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
-    <div class="absolute bottom-20 right-10 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+    <div class="absolute rounded-full bg-light top-20 left-10 w-72 h-72 mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+    <div class="absolute rounded-full bg-primary bottom-20 right-10 w-72 h-72 mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
   </div>
 
-  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-    <div class="grid md:grid-cols-2 gap-12 items-center">
+  <div class="relative px-4 py-20 mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <div class="grid items-center gap-12 md:grid-cols-2">
       
       <div class="opacity-0 animate-fade-in-right"> <div class="flex items-center gap-2 mb-6">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
             <path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/>
           </svg>
-          <span class="text-blue-600 font-semibold">Axios Technologies</span>
+          <span class="font-semibold text-primary">Axios Technologies</span>
         </div>
         
-        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
+        <h1 class="mb-6 text-5xl font-bold text-gray-900 md:text-6xl lg:text-7xl">
           Transformamos tus{' '}
-          <span class="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-purple-600">
+          <span class="text-transparent bg-clip-text bg-linear-to-r from-primary to-primary-dark">
             ideas digitales
           </span>
           {' '}en realidad
         </h1>
         
-        <p class="text-xl text-gray-600 mb-8">
+        <p class="mb-8 text-xl text-gray-600">
           Creamos páginas web modernas, rápidas y adaptadas a tus necesidades. 
           Tu presencia digital comienza aquí.
         </p>
         
-        <div class="flex flex-col sm:flex-row gap-4">
+        <div class="flex flex-col gap-4 sm:flex-row">
           <button 
             id="hero-btn-contact"
-            class="px-8 py-4 bg-linear-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold flex items-center justify-center gap-2 hover:shadow-xl hover:scale-105 active:scale-95 transition-all duration-300"
+            class="flex items-center justify-center gap-2 px-8 py-4 font-semibold text-white transition-all duration-300 rounded-lg bg-linear-to-r from-primary to-primary-dark hover:shadow-xl hover:scale-105 active:scale-95"
           >
             Comenzar Proyecto
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -47,7 +47,7 @@ import heroImage from '@images/imagen-codigo.jpg';
           
           <button 
             id="hero-btn-services"
-            class="px-8 py-4 border-2 border-gray-300 text-gray-700 rounded-lg font-semibold hover:border-blue-600 hover:text-blue-600 hover:scale-105 active:scale-95 transition-all duration-300"
+            class="px-8 py-4 font-semibold text-gray-700 transition-all duration-300 border-2 border-gray-300 rounded-lg hover:border-primary hover:text-primary hover:scale-105 active:scale-95"
           >
             Ver Servicios
           </button>
@@ -55,17 +55,17 @@ import heroImage from '@images/imagen-codigo.jpg';
       </div>
 
       <div class="relative opacity-0 animate-fade-in-left animation-delay-500">
-        <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+        <div class="relative overflow-hidden shadow-2xl rounded-2xl">
           <Image
             src={heroImage}
             alt="Desarrollo web profesional"
-            class="w-full h-auto object-cover"
+            class="object-cover w-full h-auto"
             loading="eager"
           />
           
-          <div class="absolute bottom-8 left-8 bg-white rounded-lg shadow-xl p-6 max-w-xs animate-float-up opacity-0 animation-delay-1000">
+          <div class="absolute max-w-xs p-6 bg-white rounded-lg shadow-xl opacity-0 bottom-8 left-8 animate-float-up animation-delay-1000">
             <div class="flex items-center gap-3">
-              <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+              <div class="flex items-center justify-center w-12 h-12 bg-green-100 rounded-full">
                 <div class="w-6 h-6 bg-green-500 rounded-full animate-pulse" />
               </div>
               <div>
