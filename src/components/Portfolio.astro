@@ -7,25 +7,28 @@ import imagenCorporativo from '@images/imagen-sitio-corporativo.jpg';
 
 const projects = [
   {
-    title: 'E-commerce Moderno',
+    title: 'Omnifood',
+    category: 'Landing Page',
+    description: 'Plataforma de comida saludable con suscripción personalizada. Diseño moderno que promociona alimentación equilibrada con entrega a domicilio.',
+    image: imagenTienda,
+    url: 'https://omaraedoalvarez.github.io/Omnifood/',
+    tags: ['Landing Page', 'Responsive', 'Food Tech']
+  },
+  {
+    title: 'Elysium',
     category: 'Tienda Online',
-    description: 'Plataforma de comercio electrónico con diseño minimalista y experiencia de compra optimizada.',
-    image: imagenTienda,    
-    tags: ['E-commerce', 'Responsive', 'SEO']
-  },
-  {
-    title: 'Landing Corporativa',
-    category: 'Sitio Corporativo',
-    description: 'Página web profesional para empresa de servicios con formulario de contacto integrado.',
+    description: 'E-commerce elegante para joyería de lujo. Experiencia de compra sofisticada con catálogo de piezas exclusivas y diseño premium.',
     image: imagenCorporativo,
-    tags: ['Corporate', 'Landing Page', 'Fast']
+    url: 'https://omaraedoalvarez.github.io/Elysium/',
+    tags: ['E-commerce', 'Luxury', 'Jewelry']
   },
   {
-    title: 'Portfolio Creativo',
-    category: 'Portfolio',
-    description: 'Sitio web para mostrar proyectos creativos con galería de imágenes y animaciones.',
+    title: 'TeCanto',
+    category: 'Portfolio Musical',
+    description: 'Sitio web profesional para cantante de música cristiana. Incluye galería multimedia, calendario de eventos y reproducción de música.',
     image: imagenHero,
-    tags: ['Portfolio', 'Animations', 'Modern']
+    url: 'https://cinthiabenaducci.com/',
+    tags: ['Portfolio', 'Music', 'Artist']
   }
 ];
 ---
@@ -57,12 +60,12 @@ const projects = [
             />
             
             <div class="absolute inset-0 bg-linear-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
-              <button class="px-6 py-2 bg-white text-gray-900 rounded-full font-semibold flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+              <a href={project.url} target="_blank" rel="noopener noreferrer" class="px-6 py-2 bg-white text-gray-900 rounded-full font-semibold flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 hover:bg-gray-100">
                 Ver Proyecto
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
                 </svg>
-              </button>
+              </a>
             </div>
           </div>
           
