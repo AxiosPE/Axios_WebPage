@@ -11,18 +11,31 @@
 }
 
 @theme {
-  --color-primary-50: rgb(238 247 247);
-  --color-primary-100: rgb(206 233 233);
-  --color-primary-200: rgb(175 218 218);
-  --color-primary-300: rgb(143 204 204);
-  --color-primary-500: rgb(80 175 175);
-  --color-primary-700: rgb(52 112 112);
-  --color-primary-900: rgb(22 49 49);
-  --color-primary-950: rgb(8 17 17);
+  --color-primary-50: #EEF7F7;
+  --color-primary-100: #CEE9E9;
+  --color-primary-200: #AFDADA;
+  --color-primary-300: #8FCCCC;
+  --color-primary-400: #70BDBD;
+  --color-primary: #50AFAF;
+  --color-primary-600: #428F8F;
+  --color-primary-dark: #337070;
+  --color-primary-800: #255050;
+  --color-primary-darker: #163131;
+  --color-primary-950: #081111;
 
-  --color-primary-light: rgb(112 189 189);
-  --color-primary: rgb(66 143 143);
-  --color-primary-dark: rgb(37 80 80);
+  --color-secondary-50: #FFF2E6;
+  --color-secondary-100: #FFDAB8;
+  --color-secondary-200: #FFC28A;
+  --color-secondary-light: #FFAB5C;
+  --color-secondary-400: #FF932E;
+  --color-secondary: #FF7D00;
+  --color-secondary-600: #D16500;
+  --color-secondary-700: #A34F00;
+  --color-secondary-800: #753900;
+  --color-secondary-900: #472300;
+  --color-secondary-950: #1A0C00;
+
+  --color-background: #F8FAFC;
 }
 
 @font-face {
@@ -43,7 +56,7 @@
 
 body {
   font-family: var(--font-dm-sans);
-  background: white;
+  background: var(--color-background);
   word-wrap: break-word;
   overflow-wrap: break-word;
   color: rgb(var(--gray-dark));
