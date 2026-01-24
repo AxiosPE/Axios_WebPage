@@ -1,42 +1,46 @@
 ---
 // src/components/Portfolio.astro
-import { Image } from 'astro:assets';
-import imagenFood from '@images/food.jpg';
-import imagenJewelry from '@images/jewlery.jpg';
-import imagenMusic from '@images/music.jpg';
+import { Image } from "astro:assets";
+import imagenFood from "@images/food.jpg";
+import imagenJewelry from "@images/jewlery.jpg";
+import imagenMusic from "@images/music.jpg";
 
 const projects = [
   {
-    title: 'Omnifood',
-    category: 'Landing Page',
-    description: 'Plataforma de comida saludable con suscripción personalizada. Diseño moderno que promociona alimentación equilibrada con entrega a domicilio.',
+    title: "Omnifood",
+    category: "Landing Page",
+    description:
+      "Plataforma de comida saludable con suscripción personalizada. Diseño moderno que promociona alimentación equilibrada con entrega a domicilio.",
     image: imagenFood,
-    url: 'https://omaraedoalvarez.github.io/Omnifood/',
-    tags: ['Landing Page', 'Responsive', 'Food Tech']
+    url: "https://omaraedoalvarez.github.io/Omnifood/",
+    tags: ["Landing Page", "Responsive", "Food Tech"],
   },
   {
-    title: 'Elysium',
-    category: 'Tienda Online',
-    description: 'E-commerce elegante para joyería de lujo. Experiencia de compra sofisticada con catálogo de piezas exclusivas y diseño premium.',
+    title: "Elysium",
+    category: "Tienda Online",
+    description:
+      "E-commerce elegante para joyería de lujo. Experiencia de compra sofisticada con catálogo de piezas exclusivas y diseño premium.",
     image: imagenJewelry,
-    url: 'https://omaraedoalvarez.github.io/Elysium/',
-    tags: ['E-commerce', 'Luxury', 'Jewelry']
+    url: "https://omaraedoalvarez.github.io/Elysium/",
+    tags: ["E-commerce", "Luxury", "Jewelry"],
   },
   {
-    title: 'TeCanto',
-    category: 'Portfolio Musical',
-    description: 'Sitio web profesional para cantante de música cristiana. Incluye galería multimedia, calendario de eventos y reproducción de música.',
+    title: "TeCanto",
+    category: "Portfolio Musical",
+    description:
+      "Sitio web profesional para cantante de música cristiana. Incluye galería multimedia, calendario de eventos y reproducción de música.",
     image: imagenMusic,
-    url: 'https://cinthiabenaducci.com/',
-    tags: ['Portfolio', 'Music', 'Artist']
-  }
+    url: "https://cinthiabenaducci.com/",
+    tags: ["Portfolio", "Music", "Artist"],
+  },
 ];
 ---
 
 <section id="portfolio" class="py-20 bg-linear-to-br">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    
-    <div class="text-center mb-16 opacity-0 translate-y-8 transition-all duration-700 ease-out scroll-animate">
+    <div
+      class="text-center mb-16 opacity-0 translate-y-8 transition-all duration-700 ease-out scroll-animate"
+    >
       <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
         Proyectos Destacados
       </h2>
@@ -46,50 +50,70 @@ const projects = [
     </div>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {projects.map((project, index) => (
-        <article 
-          class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 opacity-0 scale-95 scroll-animate"
-          style={`transition-delay: ${index * 150}ms`}
-        >
-          <div class="relative overflow-hidden aspect-video">
-            <Image
-              src={project.image}
-              alt={project.title}
-              class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
-              loading="lazy"
-            />
-            
-            <div class="absolute inset-0 bg-linear-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
-              <a href={project.url} target="_blank" rel="noopener noreferrer" class="px-6 py-2 bg-white text-gray-900 rounded-full font-semibold flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 hover:bg-gray-100">
-                Ver Proyecto
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
-                </svg>
-              </a>
+      {
+        projects.map((project, index) => (
+          <article
+            class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 opacity-0 scale-95 scroll-animate"
+            style={`transition-delay: ${index * 150}ms`}
+          >
+            <div class="relative overflow-hidden aspect-video">
+              <Image
+                src={project.image}
+                alt={project.title}
+                class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                loading="eager"
+                widths={[400, 800, 1200]}
+              />
+
+              <div class="absolute inset-0 bg-linear-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="px-6 py-2 bg-white text-gray-900 rounded-full font-semibold flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 hover:bg-gray-100"
+                >
+                  Ver Proyecto
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <>
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                      <polyline points="15 3 21 3 21 9" />
+                      <line x1="10" y1="14" x2="21" y2="3" />
+                    </>
+                  </svg>
+                </a>
+              </div>
             </div>
-          </div>
-          
-          <div class="p-6">
-            <p class="text-sm text-primary font-semibold mb-2">
-              {project.category}
-            </p>
-            <h3 class="text-xl font-bold text-gray-900 mb-2">
-              {project.title}
-            </h3>
-            <p class="text-gray-600 mb-4">
-              {project.description}
-            </p>
-            
-            <div class="flex flex-wrap gap-2">
-              {project.tags.map((tag) => (
-                <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">
-                  {tag}
-                </span>
-              ))}
+
+            <div class="p-6">
+              <p class="text-sm text-primary font-semibold mb-2">
+                {project.category}
+              </p>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">
+                {project.title}
+              </h3>
+              <p class="text-gray-600 mb-4">{project.description}</p>
+
+              <div class="flex flex-wrap gap-2">
+                {project.tags.map((tag) => (
+                  <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
-        </article>
-      ))}
+          </article>
+        ))
+      }
     </div>
   </div>
 </section>
@@ -97,20 +121,20 @@ const projects = [
 <script>
   const observerOptions = {
     root: null,
-    rootMargin: '0px',
-    threshold: 0.1
+    rootMargin: "0px",
+    threshold: 0.1,
   };
 
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.remove('opacity-0', 'translate-y-8', 'scale-95');
+        entry.target.classList.remove("opacity-0", "translate-y-8", "scale-95");
         observer.unobserve(entry.target);
       }
     });
   }, observerOptions);
 
-  document.querySelectorAll('.scroll-animate').forEach((el) => {
+  document.querySelectorAll(".scroll-animate").forEach((el) => {
     observer.observe(el);
   });
 </script>
